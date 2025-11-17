@@ -301,7 +301,8 @@ let galleryMode = false;
 let heartInterval = setInterval(createFloatingHeart, 800);
 let imageInterval = setInterval(createFloatingImage, 3000);
 
-function toggleGallery() {
+// Hacer la función global
+window.toggleGallery = function () {
   galleryMode = !galleryMode;
   const body = document.body;
   const btn = document.getElementById("toggle-gallery-btn");
@@ -337,7 +338,7 @@ function toggleGallery() {
     heartInterval = setInterval(createFloatingHeart, 800);
     imageInterval = setInterval(createFloatingImage, 3000);
   }
-}
+};
 
 // Inicializar efectos visuales
 const firstBg = document.querySelector(".background-image");

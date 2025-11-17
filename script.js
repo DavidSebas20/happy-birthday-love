@@ -111,7 +111,8 @@ let imageInterval = setInterval(createFloatingImage, 3000);
 // ==================== MODO GALERÍA ====================
 let galleryMode = false;
 
-function toggleGallery() {
+// Hacer la función global
+window.toggleGallery = function () {
   galleryMode = !galleryMode;
   const body = document.body;
   const btn = document.getElementById("toggle-gallery-btn");
@@ -147,7 +148,7 @@ function toggleGallery() {
     heartInterval = setInterval(createFloatingHeart, 800);
     imageInterval = setInterval(createFloatingImage, 3000);
   }
-}
+};
 
 // ==================== INICIALIZAR ====================
 document.addEventListener("DOMContentLoaded", function () {
