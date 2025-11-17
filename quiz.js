@@ -298,8 +298,8 @@ setInterval(createFloatingImage, 3000);
 
 // ==================== MODO GALERÍA ====================
 let galleryMode = false;
-let heartInterval;
-let imageInterval;
+let heartInterval = setInterval(createFloatingHeart, 800);
+let imageInterval = setInterval(createFloatingImage, 3000);
 
 function toggleGallery() {
   galleryMode = !galleryMode;

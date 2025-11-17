@@ -63,7 +63,7 @@ function createFloatingHeart() {
 }
 
 // Crear corazones cada 800ms
-setInterval(createFloatingHeart, 800);
+let heartInterval = setInterval(createFloatingHeart, 800);
 
 // ==================== CREAR IMÁGENES FLOTANTES ====================
 function createFloatingImage() {
@@ -106,12 +106,10 @@ function createFloatingImage() {
 }
 
 // Crear imágenes cada 3 segundos
-setInterval(createFloatingImage, 3000);
+let imageInterval = setInterval(createFloatingImage, 3000);
 
 // ==================== MODO GALERÍA ====================
 let galleryMode = false;
-let heartInterval;
-let imageInterval;
 
 function toggleGallery() {
   galleryMode = !galleryMode;
