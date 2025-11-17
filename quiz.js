@@ -200,9 +200,24 @@ const backgroundImages = [
 
 // IMÁGENES/GIFS FLOTANTES - Usa los mismos que en script.js
 const floatingImages = [
-  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXZ4eGRvNzZrYmN3YnZ3Zzd2Yzl6ejZrYmN3Yzd2Yzl6ejZrYmN3YnZ3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/example1/giphy.gif",
-  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXZ4eGRvNzZrYmN3YnZ3Zzd2Yzl6ejZrYmN3Yzd2Yzl6ejZrYmN3YnZ3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/example2/giphy.gif",
-  "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXZ4eGRvNzZrYmN3YnZ3Zzd2Yzl6ejZrYmN3Yzd2Yzl6ejZrYmN3YnZ3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/example3/giphy.gif",
+  "https://i.pinimg.com/originals/fd/35/30/fd3530b992c00cc1556a794a306cef45.gif",
+  "https://i.pinimg.com/originals/2e/50/01/2e5001e76859afbf2a045a0c4f3a4107.gif",
+  "https://i.pinimg.com/originals/c3/bb/4d/c3bb4d7ea3365dce2df03e17e659d058.gif",
+  "https://i.pinimg.com/originals/eb/8d/c1/eb8dc1b0d517739a7adba71983796aa7.gif",
+  "https://i.pinimg.com/736x/21/e9/48/21e948740808fac5adc5eaf70260ec8e.jpg",
+  "https://i.pinimg.com/originals/01/2a/e7/012ae77a7bf2882ba4e72a0c26243335.gif",
+  "https://i.pinimg.com/originals/49/84/ce/4984ce4f416747e312d01273d8756657.gif",
+  "https://i.pinimg.com/originals/17/20/35/1720353613d7a0846551ab6aedfc80fb.gif",
+  "https://i.pinimg.com/originals/ae/44/53/ae44534c93938ba24cf923e7a5f913c4.gif",
+  "https://i.pinimg.com/originals/49/3d/d3/493dd329f4eac0f7c8fd9f6f251b6346.jpg",
+  "https://i.pinimg.com/originals/d4/69/33/d46933d5a5ce73ddf4a887d3a62875bd.gif",
+  "https://i.pinimg.com/originals/b5/0b/74/b50b748c25d0e8c3041475f1cd535869.gif",
+  "https://i.pinimg.com/736x/f0/61/ac/f061acd4587df4695de71d70cc8956ae.jpg",
+  "https://i.pinimg.com/originals/03/72/22/037222b77ef49198a6bdfab8080be631.gif",
+  "https://i.pinimg.com/originals/49/84/ce/4984ce4f416747e312d01273d8756657.gif",
+  "https://i.pinimg.com/originals/91/ab/c2/91abc2a660f0262d410b5f186d52d269.gif",
+  "https://i.pinimg.com/originals/27/3d/54/273d546db1d47f4575d4287345b0631c.gif",
+  "https://i.pinimg.com/originals/00/88/99/008899fc6341e299e583e36410691631.gif",
 ];
 
 let currentBackgroundIndex = 0;
