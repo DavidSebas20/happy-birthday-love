@@ -190,6 +190,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if (mainContent) {
       mainContent.style.display = "block";
+      // Forzar reflow para que la transición funcione
+      mainContent.offsetHeight;
+      mainContent.style.opacity = "1";
+
       // Agregar animación de entrada a la carta
       const card = document.querySelector(".birthday-card");
       if (card) {
