@@ -419,11 +419,16 @@ body.gallery-mode .gallery-toggle-btn {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
-.content-container[style*="display: block"] {
+/* Ocultar contenido en index.html cuando hay animación */
+#main-content {
+  opacity: 0;
+}
+
+#main-content[style*="display: block"] {
   opacity: 1;
 }
 
