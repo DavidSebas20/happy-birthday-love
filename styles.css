@@ -130,7 +130,7 @@ body.gallery-mode .gallery-toggle-btn {
 
 .flame {
   position: absolute;
-  top: -25px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
   width: 15px;
@@ -257,10 +257,10 @@ body.gallery-mode .gallery-toggle-btn {
 
 @keyframes flameMove {
   0% {
-    top: -25px;
+    top: -35px;
   }
   100% {
-    top: 5px;
+    top: -5px;
   }
 }
 
@@ -414,7 +414,7 @@ body.gallery-mode .gallery-toggle-btn {
 /* ==================== CONTENEDOR PRINCIPAL ==================== */
 .content-container {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   padding: 40px 20px;
   min-height: 100vh;
   display: flex;
@@ -439,6 +439,8 @@ body.gallery-mode .gallery-toggle-btn {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   border: none;
   animation: fadeInDown 1s ease-out;
+  position: relative;
+  z-index: 10;
 }
 
 .birthday-title {
@@ -524,6 +526,8 @@ body.gallery-mode .gallery-toggle-btn {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   border: none;
   animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  z-index: 10;
 }
 
 .quiz-title {
