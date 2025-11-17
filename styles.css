@@ -1,0 +1,480 @@
+/* ==================== ESTILOS GENERALES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ==================== FONDOS ANIMADOS ==================== */
+#background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.background-image.active {
+  opacity: 1;
+}
+
+/* Imágenes de fondo por defecto (puedes cambiarlas por las tuyas) */
+.background-image:nth-child(1) {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.background-image:nth-child(2) {
+  background-image: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Overlay para mejor legibilidad */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* ==================== CORAZONES FLOTANTES ==================== */
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 24px;
+  color: #ff6b9d;
+  opacity: 0;
+  pointer-events: none;
+  animation: floatUp 8s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+}
+
+/* ==================== IMÁGENES FLOTANTES ==================== */
+.floating-image {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  animation: floatUp 8s ease-in-out infinite;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.floating-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.love-phrase {
+  position: absolute;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 107, 157, 0.2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  animation: fadeInOut 6s ease-in-out infinite;
+  max-width: 250px;
+  text-align: center;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.content-container {
+  position: relative;
+  z-index: 2;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ==================== CARTA DE CUMPLEAÑOS ==================== */
+.birthday-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: none;
+  animation: fadeInDown 1s ease-out;
+}
+
+.birthday-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #e91e63;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.heart-icon {
+  color: #e91e63;
+  font-size: 2rem;
+  animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.letter-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.greeting {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5rem;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.closing {
+  font-style: italic;
+  margin-top: 30px;
+  text-align: right;
+}
+
+.signature {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.3rem;
+  color: #e91e63;
+  display: block;
+  margin-top: 10px;
+}
+
+/* ==================== BOTONES ==================== */
+.btn-custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+}
+
+/* ==================== PÁGINA DE QUIZ ==================== */
+.quiz-body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.quiz-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: none;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.quiz-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  color: #e91e63;
+  font-weight: 700;
+}
+
+.quiz-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.progress-container {
+  margin: 20px 0;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.question-section {
+  margin: 30px 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.question-number {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-left: 4px solid #e91e63;
+  border-radius: 8px;
+}
+
+.answer-input {
+  font-size: 1rem;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px 0 0 10px;
+}
+
+.answer-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.feedback-message {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  display: none;
+}
+
+.feedback-message.show {
+  display: block;
+  animation: slideDown 0.5s ease-out;
+}
+
+.feedback-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.love-message {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  color: #e91e63;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* ==================== MENSAJE FINAL ==================== */
+.final-message {
+  text-align: center;
+  padding: 40px 20px;
+  animation: zoomIn 0.8s ease-out;
+}
+
+.final-heart {
+  font-size: 5rem;
+  color: #e91e63;
+  animation: heartBeat 1.5s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+.final-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.final-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* ==================== ANIMACIONES ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .birthday-title {
+    font-size: 2rem;
+  }
+
+  .letter-content {
+    font-size: 1rem;
+  }
+
+  .quiz-title {
+    font-size: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .love-phrase {
+    font-size: 16px;
+    max-width: 180px;
+    padding: 8px 15px;
+  }
+
+  .floating-heart {
+    font-size: 20px;
+  }
+
+  .final-heart {
+    font-size: 3rem;
+  }
+
+  .final-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .birthday-title {
+    font-size: 1.5rem;
+  }
+
+  .heart-icon {
+    font-size: 1.5rem;
+  }
+
+  .btn-custom {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .content-container {
+    padding: 20px 10px;
+  }
+}
