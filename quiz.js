@@ -2,20 +2,25 @@
 // AQUÍ PUEDES AGREGAR TUS PREGUNTAS Y RESPUESTAS
 const quizData = {
   question1: {
-    question: "Pregunta de ejemplo 1: ¿Cuál es tu color favorito?",
-    answer: "rosa", // respuesta correcta (en minúsculas)
+    question:
+      "No soy regalo de caja ni me envuelves en papel, pero soy un momento que saboreas lento. Nos une entre sabores, risas y miradas,bajo una luz tenue, quizá velas encendidas.¿Qué soy?",
+    answer: "cena", // respuesta correcta (en minúsculas)
     loveMessage:
-      "¡Correcto mi amor! Como el rosa de tus mejillas cuando te sonrojas 💕",
+      "¡Correcto mi amor! Hoy vamos a cenar en un lugar muy bonito 💕",
   },
   question2: {
-    question: "Pregunta de ejemplo 2: ¿En qué mes nos conocimos?",
-    answer: "enero", // respuesta correcta (en minúsculas)
-    loveMessage: "¡Exacto mi vida! El mejor mes de mi vida porque te conocí ❤️",
+    question:
+      "Soy arte y ciencia, aunque no pinto ni observo el cielo, mi lienzo es una cavidad, oscuro y pequeño. Vivo entre piezas alineadas en arco, y con pulso firme, devuelvo brillo a lo opaco. Conozco raíces que no crecen en tierra, y batallo contra enemigos silenciosos que desgarran. No soy botánica ni arquitectura en sí, pero estudio estructuras que sostienen una sonrisa al fin. ¿Qué soy?",
+    answer: "odontología", // respuesta correcta (en minúsculas)
+    loveMessage:
+      "¡Exacto mi vida! Sigue estudiando porfavor aqui tienes la página web que transcribe tus audios  ❤️",
   },
   question3: {
-    question: "Pregunta de ejemplo 3: ¿Cuánto te amo?",
-    answer: "infinito", // respuesta correcta (en minúsculas)
-    loveMessage: "¡Sí mi amor! Te amo hasta el infinito y más allá 💖",
+    question:
+      "No soy libro, pero me lees como si lo fuera. No soy espejo, pero reflejo tu mundo en mi cara. No tengo plumas, pero capturo ideas en un toque. Soy más ligera que un universo de conocimiento, y más silenciosa que un secreto bien guardado. Doy luz sin quemar, respuestas sin preguntar, y a través de mí, navegas mares sin mojarte. ¿Quién soy?",
+    answer: "tablet", // respuesta correcta (en minúsculas)
+    loveMessage:
+      "¡Sí mi amor! Espero que te ayude muchisimo en la Universidad 💖",
   },
 };
 
