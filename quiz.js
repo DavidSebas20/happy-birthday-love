@@ -248,6 +248,7 @@ function createFloatingHeart() {
   heart.innerHTML = "❤️";
 
   heart.style.left = Math.random() * 100 + "%";
+  heart.style.top = Math.random() * 100 + "%";
   heart.style.animationDelay = Math.random() * 2 + "s";
   heart.style.fontSize = Math.random() * 20 + 20 + "px";
 
@@ -279,6 +280,7 @@ function createFloatingImage() {
   imageContainer.appendChild(img);
 
   imageContainer.style.left = Math.random() * 100 + "%";
+  imageContainer.style.top = Math.random() * 100 + "%";
   imageContainer.style.animationDelay = Math.random() * 2 + "s";
 
   const size = Math.random() * 70 + 80;
@@ -293,6 +295,49 @@ function createFloatingImage() {
 }
 
 setInterval(createFloatingImage, 3000);
+
+// ==================== MODO GALERÍA ====================
+let galleryMode = false;
+let heartInterval;
+let imageInterval;
+
+function toggleGallery() {
+  galleryMode = !galleryMode;
+  const body = document.body;
+  const btn = document.getElementById("toggle-gallery-btn");
+
+  if (galleryMode) {
+    // Activar modo galería
+    body.classList.add("gallery-mode");
+    btn.innerHTML = '<i class="fas fa-arrow-left me-2"></i>Regresar';
+
+    // Aumentar la frecuencia de corazones e imágenes
+    clearInterval(heartInterval);
+    clearInterval(imageInterval);
+
+    heartInterval = setInterval(createFloatingHeart, 400); // Más corazones
+    imageInterval = setInterval(createFloatingImage, 1500); // Más imágenes
+
+    // Crear muchos corazones e imágenes inmediatamente
+    for (let i = 0; i < 15; i++) {
+      setTimeout(createFloatingHeart, i * 200);
+    }
+    for (let i = 0; i < 5; i++) {
+      setTimeout(createFloatingImage, i * 400);
+    }
+  } else {
+    // Desactivar modo galería
+    body.classList.remove("gallery-mode");
+    btn.innerHTML = '<i class="fas fa-images me-2"></i>Ver Bebés';
+
+    // Volver a la frecuencia normal
+    clearInterval(heartInterval);
+    clearInterval(imageInterval);
+
+    heartInterval = setInterval(createFloatingHeart, 800);
+    imageInterval = setInterval(createFloatingImage, 3000);
+  }
+}
 
 // Inicializar efectos visuales
 const firstBg = document.querySelector(".background-image");

@@ -12,6 +12,49 @@ body {
   position: relative;
 }
 
+/* ==================== BOTÓN VER BEBÉS ==================== */
+.gallery-toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gallery-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+}
+
+.gallery-toggle-btn i {
+  font-size: 1.1rem;
+}
+
+/* Modo galería activo */
+body.gallery-mode .content-container {
+  display: none !important;
+}
+
+body.gallery-mode .overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body.gallery-mode .gallery-toggle-btn {
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+
 /* ==================== FONDOS ANIMADOS ==================== */
 #background-container {
   position: fixed;
@@ -425,6 +468,13 @@ body {
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
+  .gallery-toggle-btn {
+    top: 15px;
+    left: 15px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
   .birthday-title {
     font-size: 2rem;
   }

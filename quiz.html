@@ -27,6 +27,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="quiz-body">
+    <!-- Botón Ver Bebés -->
+    <button
+      id="toggle-gallery-btn"
+      class="gallery-toggle-btn"
+      onclick="toggleGallery()"
+    >
+      <i class="fas fa-images me-2"></i>Ver Bebés
+    </button>
+
     <!-- Contenedor de fondos -->
     <div id="background-container">
       <div class="background-image active"></div>
@@ -38,7 +47,6 @@
 
     <!-- Corazones flotantes -->
     <div id="hearts-container"></div>
-
     <!-- Contenido del Quiz -->
     <div class="container content-container">
       <div class="row justify-content-center">
