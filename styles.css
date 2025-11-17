@@ -55,6 +55,213 @@ body.gallery-mode .gallery-toggle-btn {
   background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
 }
 
+/* ==================== ANIMACIÓN DE CUMPLEAÑOS ==================== */
+.birthday-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-in-out 5s forwards;
+}
+
+.birthday-animation-content {
+  text-align: center;
+  animation: scaleIn 1s ease-out;
+}
+
+.birthday-animation-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: white;
+  margin-top: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+.birthday-animation-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 15px;
+  animation: fadeInUp 1s ease-out 1s backwards;
+}
+
+/* Pastel */
+.cake-container {
+  animation: bounceIn 1s ease-out;
+}
+
+.cake {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.candle {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 60px;
+  background: linear-gradient(to bottom, #ff6b6b 0%, #ff8787 100%);
+  border-radius: 3px;
+  animation: candleBurn 5s ease-in-out;
+}
+
+.candle::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 8px;
+  background: #ffd93d;
+  border-radius: 50%;
+}
+
+.flame {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 25px;
+  background: linear-gradient(to top, #ff6b00 0%, #ffaa00 50%, #ffff00 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: flameFlicker 0.3s ease-in-out infinite alternate,
+    flameFade 5s ease-in-out;
+  box-shadow: 0 0 20px #ff6b00;
+}
+
+.cake-layer {
+  width: 200px;
+  height: 40px;
+  margin: 5px auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.layer-top {
+  background: linear-gradient(to bottom, #ff6b9d 0%, #ff85ad 100%);
+  animation: slideIn 0.5s ease-out 0.3s backwards;
+}
+
+.layer-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(
+    90deg,
+    #ff6b9d 0%,
+    #ffd93d 25%,
+    #6bcf7f 50%,
+    #4facfe 75%,
+    #ff6b9d 100%
+  );
+  border-radius: 10px 10px 0 0;
+}
+
+.layer-middle {
+  background: linear-gradient(to bottom, #ffd93d 0%, #ffed4e 100%);
+  animation: slideIn 0.5s ease-out 0.5s backwards;
+}
+
+.layer-bottom {
+  background: linear-gradient(to bottom, #a8e6cf 0%, #c4f0de 100%);
+  animation: slideIn 0.5s ease-out 0.7s backwards;
+}
+
+/* Animaciones */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flameFlicker {
+  0% {
+    transform: translateX(-50%) scaleY(1);
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1.1);
+  }
+}
+
+@keyframes flameFade {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes candleBurn {
+  0% {
+    height: 60px;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ==================== FONDOS ANIMADOS ==================== */
 #background-container {
   position: fixed;
@@ -475,6 +682,28 @@ body.gallery-mode .gallery-toggle-btn {
     font-size: 0.9rem;
   }
 
+  .birthday-animation-title {
+    font-size: 2rem;
+  }
+
+  .birthday-animation-subtitle {
+    font-size: 1rem;
+  }
+
+  .cake {
+    width: 150px;
+  }
+
+  .cake-layer {
+    width: 150px;
+    height: 30px;
+  }
+
+  .candle {
+    width: 12px;
+    height: 50px;
+  }
+
   .birthday-title {
     font-size: 2rem;
   }
@@ -511,6 +740,19 @@ body.gallery-mode .gallery-toggle-btn {
 }
 
 @media (max-width: 576px) {
+  .birthday-animation-title {
+    font-size: 1.5rem;
+  }
+
+  .cake {
+    width: 120px;
+  }
+
+  .cake-layer {
+    width: 120px;
+    height: 25px;
+  }
+
   .birthday-title {
     font-size: 1.5rem;
   }

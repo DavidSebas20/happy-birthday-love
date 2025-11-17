@@ -48,12 +48,36 @@
     <!-- Corazones flotantes -->
     <div id="hearts-container"></div>
 
+    <!-- Animación de Cumpleaños -->
+    <div id="birthday-animation" class="birthday-animation-container">
+      <div class="birthday-animation-content">
+        <div class="cake-container">
+          <div class="cake">
+            <div class="candle">
+              <div class="flame"></div>
+            </div>
+            <div class="cake-layer layer-top"></div>
+            <div class="cake-layer layer-middle"></div>
+            <div class="cake-layer layer-bottom"></div>
+          </div>
+        </div>
+        <h1 class="birthday-animation-title">¡Feliz Cumpleaños Amor!</h1>
+        <p class="birthday-animation-subtitle">
+          Preparando algo especial para ti...
+        </p>
+      </div>
+    </div>
+
     <!-- Contenido principal -->
-    <div class="container content-container">
+    <div
+      class="container content-container"
+      id="main-content"
+      style="display: none"
+    >
       <div class="row justify-content-center">
         <div class="col-lg-8 col-md-10">
           <!-- Carta de cumpleaños -->
-          <div class="card birthday-card animate__animated animate__fadeInDown">
+          <div class="card birthday-card">
             <div class="card-body p-4 p-md-5">
               <div class="text-center mb-4">
                 <i class="fas fa-heart heart-icon"></i>
